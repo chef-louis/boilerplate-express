@@ -12,6 +12,10 @@ app.get('/', function(req, res) {
     res.sendFile(absolutePath);
 })
 
+app.get('/json', function(req, res) {
+    res.json({"message": "Hello json"});
+})
+
 // RUN LOCAL VERIFICATION BY OPENING "http://localhost:3000" IN BROWSER AFTER RUNNING 'node myApp.js' WITHIN PROJECT DIRECTORY
 app.listen(3000, function() {
     console.log("Server is listening on port 3000...");
