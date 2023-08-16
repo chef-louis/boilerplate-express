@@ -39,6 +39,10 @@ app.get('/:word/echo', function(req, res) {
     res.json({echo: req.params.word});
 });
 
+app.get('/name', function(req, res) {
+    res.json({name: req.query.first + ' ' + req.query.last});
+});
+
 
 // RUN LOCAL VERIFICATION BY OPENING "http://localhost:3000" IN BROWSER AFTER RUNNING 'node myApp.js' WITHIN PROJECT DIRECTORY
 app.listen(3000, function() {
