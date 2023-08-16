@@ -35,6 +35,10 @@ app.get('/now', function(req, res, next) {
     res.json({time: req.time});
 });
 
+app.get('/:word/echo', function(req, res) {
+    res.json({echo: req.params.word});
+});
+
 
 // RUN LOCAL VERIFICATION BY OPENING "http://localhost:3000" IN BROWSER AFTER RUNNING 'node myApp.js' WITHIN PROJECT DIRECTORY
 app.listen(3000, function() {
